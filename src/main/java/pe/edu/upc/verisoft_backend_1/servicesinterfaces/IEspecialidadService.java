@@ -1,8 +1,6 @@
 package pe.edu.upc.verisoft_backend_1.servicesinterfaces;
 
 import pe.edu.upc.verisoft_backend_1.entities.Especialidad;
-import pe.edu.upc.verisoft_backend_1.repositories.IEspecialidadRepository;
-
 import java.util.List;
 
 public interface IEspecialidadService {

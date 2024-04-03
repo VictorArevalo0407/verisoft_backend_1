@@ -1,6 +1,5 @@
 package pe.edu.upc.verisoft_backend_1.dtos;
 
-import jakarta.persistence.Column;
 
 public class EspecialidadDTO {
     private int id;
