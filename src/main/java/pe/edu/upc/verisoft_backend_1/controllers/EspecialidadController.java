@@ -2,6 +2,7 @@ package pe.edu.upc.verisoft_backend_1.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.verisoft_backend_1.dtos.EspecialidadDTO;
 import pe.edu.upc.verisoft_backend_1.entities.Especialidad;
@@ -22,6 +23,7 @@ public class EspecialidadController {
         eS.insert(especialidad);
     }
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMINISTRADOR')")
     public List<EspecialidadDTO> listar(){
         return eS.list().stream().map(y->{
                     ModelMapper m= new ModelMapper();
