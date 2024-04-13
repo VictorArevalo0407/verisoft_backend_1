@@ -6,11 +6,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class UserDTO {
-    private long id;
+    private Long id;
     private String username;
     private String password;
     private Boolean enabled;
-    private List<Role> roles;
+    //private List<Role> roles;
     private String nombre;
     private String apellido;
     private char genero;
@@ -21,11 +21,11 @@ public class UserDTO {
     private String pais_de_origen;
     private String direccion;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -53,13 +53,13 @@ public class UserDTO {
         this.enabled = enabled;
     }
 
-    public List<Role> getRoles() {
+   /*public List<Role> getRoles() {
         return roles;
-    }
+    }*/
 
-    public void setRoles(List<Role> roles) {
+   /* public void setRoles(List<Role> roles) {
         this.roles = roles;
-    }
+    }*/
 
     public String getNombre() {
         return nombre;

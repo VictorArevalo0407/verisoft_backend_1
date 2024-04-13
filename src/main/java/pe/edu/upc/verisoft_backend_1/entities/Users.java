@@ -14,7 +14,7 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(length = 30, unique = true)
     private String username;
@@ -23,7 +23,7 @@ public class Users {
     private Boolean enabled;
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "user_id")
-    @JsonManagedReference
+   // @JsonManagedReference
     private List<Role> roles;
     @Column(length = 30)
     private String nombre;
@@ -45,7 +45,7 @@ public class Users {
     public Users() {
     }
 
-    public Users(int id, String username, String password, Boolean enabled, List<Role> roles, String nombre, String apellido, char genero, LocalDate fecha_nacimiento, String dni, String correo_electronico, String telefono, String pais_de_origen, String direccion) {
+    public Users(Long id, String username, String password, Boolean enabled, List<Role> roles, String nombre, String apellido, char genero, LocalDate fecha_nacimiento, String dni, String correo_electronico, String telefono, String pais_de_origen, String direccion) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -62,11 +62,11 @@ public class Users {
         this.direccion = direccion;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

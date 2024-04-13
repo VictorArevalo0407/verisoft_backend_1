@@ -9,12 +9,12 @@ import pe.edu.upc.verisoft_backend_1.entities.Users;
 
 import java.util.List;
 
-public interface UserRepository extends JpaRepository<Users, Integer> {
+public interface UserRepository extends JpaRepository<Users,Long> {
     public Users findByUsername(String username);
 
     //BUSCAR POR NOMBRE
     @Query("select count(u.username) from Users u where u.username =:username")
-    public int buscarUsername(@Param("username") String nombre);
+    public long buscarUsername(@Param("username") String nombre);
 
 
     //INSERTAR ROLES

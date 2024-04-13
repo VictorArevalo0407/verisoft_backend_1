@@ -5,7 +5,7 @@ import pe.edu.upc.verisoft_backend_1.entities.Users;
 public class RoleDTO {
     private int id;
     private String rol;
-    private Users user;
+    private UserDTO user;
 
     public int getId() {
         return id;
@@ -23,11 +23,11 @@ public class RoleDTO {
         this.rol = rol;
     }
 
-    public Users getUser() {
+    public UserDTO getUser() {
         return user;
     }
 
-    public void setUser(Users user) {
+    public void setUser(UserDTO user) {
         this.user = user;
     }
 }
