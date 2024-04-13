@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class UserDTO {
-    private int id;
+    private long id;
     private String username;
     private String password;
     private Boolean enabled;
@@ -21,7 +21,7 @@ public class UserDTO {
     private String pais_de_origen;
     private String direccion;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
