@@ -1,48 +1,28 @@
-package pe.edu.upc.verisoft_backend_1.entities;
+package pe.edu.upc.verisoft_backend_1.dtos;
 
 import jakarta.persistence.*;
+import pe.edu.upc.verisoft_backend_1.entities.Especialidad;
+import pe.edu.upc.verisoft_backend_1.entities.Users;
 
-public class Oncologo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+import java.math.BigDecimal;
+
+public class OncologoDTO {
     private int oncologo_id;
-    @ManyToOne
-    @JoinColumn(name = "id")
     private Users user_id;
-    @ManyToOne
-    @JoinColumn(name = "especialidad_id")
     private Especialidad especialidad_id;
-    @Column(name = "experiencia_laboral_anios", nullable = false)
+
     private int experiencia_laboral_anios;
-    @Column(name = "cantidad_pacientes", nullable = false)
     private int cantidad_pacientes;
-    @Column(name = "edad", nullable = false)
     private int edad;
 
-    @Column(name = "horario_atencion", length = 100)
     private String horario_atencion;
-    @Column(name = "salario", nullable = false)
     private BigDecimal salario;
 
-    public Oncologo() {
-    }
-
-    public Oncologo(int oncologo_id, Users user_id, Especialidad especialidad_id, int experiencia_laboral_anios, int cantidad_pacientes, int edad, String horario_atencion, BigDecimal salario) {
-        this.oncologo_id = oncologo_id;
-        this.user_id = user_id;
-        this.especialidad_id = especialidad_id;
-        this.experiencia_laboral_anios = experiencia_laboral_anios;
-        this.cantidad_pacientes = cantidad_pacientes;
-        this.edad = edad;
-        this.horario_atencion = horario_atencion;
-        this.salario = salario;
-    }
-
-    public int getOdontologo_id() {
+    public int getOncologo_id() {
         return oncologo_id;
     }
 
-    public void setOdontologo_id(int oncologo_id) {
+    public void setOncologo_id(int oncologo_id) {
         this.oncologo_id = oncologo_id;
     }
 
@@ -101,3 +81,4 @@ public class Oncologo {
     public void setSalario(BigDecimal salario) {
         this.salario = salario;
     }
+}
