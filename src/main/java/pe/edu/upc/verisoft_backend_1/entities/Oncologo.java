@@ -3,9 +3,9 @@ package pe.edu.upc.verisoft_backend_1.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Oncologo")
+@Table(name = "oncologo")
 public class Oncologo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int oncologoId;
+    private int oncologo_id;
 }
