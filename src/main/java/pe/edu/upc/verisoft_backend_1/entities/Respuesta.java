@@ -1,10 +1,8 @@
 package pe.edu.upc.verisoft_backend_1.entities;
-
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Respuesta")
-
+@Table(name="Respuesta")
 public class Respuesta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,14 +10,15 @@ public class Respuesta {
     @Column(name = "gradoConsulta", nullable = false, length = 50)
     private String gradoConsulta;
     @Column(name = "nivelRespuesta", nullable = false, length = 400)
-
     private String nivelRespuesta;
-
+    @ManyToOne
+    @JoinColumn(name = "pacienteId")
+    private Paciente paciente;
     public Respuesta() {
     }
-
-    public Respuesta(int idRespuesta, String gradoConsulta, String nivelRespuesta) {
+    public Respuesta(int idRespuesta, Paciente paciente, String gradoConsulta, String nivelRespuesta) {
         this.idRespuesta = idRespuesta;
+        this.paciente = paciente;
         this.gradoConsulta = gradoConsulta;
         this.nivelRespuesta = nivelRespuesta;
     }
@@ -30,6 +29,14 @@ public class Respuesta {
 
     public void setIdRespuesta(int idRespuesta) {
         this.idRespuesta = idRespuesta;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 
     public String getGradoConsulta() {
@@ -48,3 +55,4 @@ public class Respuesta {
         this.nivelRespuesta = nivelRespuesta;
     }
 }
+

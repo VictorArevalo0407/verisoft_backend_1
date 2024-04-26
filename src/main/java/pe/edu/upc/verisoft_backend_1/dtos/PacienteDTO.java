@@ -4,7 +4,6 @@ import pe.edu.upc.verisoft_backend_1.entities.Users;
 
 public class PacienteDTO {
     private int idPaciente;
-    private Respuesta respuesta;
     private Users user;
     private String contactoEmergencia;
     private String estado;
@@ -15,14 +14,6 @@ public class PacienteDTO {
 
     public void setIdPaciente(int idPaciente) {
         this.idPaciente = idPaciente;
-    }
-
-    public Respuesta getRespuesta() {
-        return respuesta;
-    }
-
-    public void setRespuesta(Respuesta respuesta) {
-        this.respuesta = respuesta;
     }
 
     public Users getUser() {
