@@ -5,13 +5,13 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "Oncologo")
+@Table(name="Oncologo")
 public class Oncologo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int oncologo_id;
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     private Users user_id;
     @ManyToOne
     @JoinColumn(name = "especialidad_id")
@@ -28,10 +28,14 @@ public class Oncologo {
     @Column(name = "salario", nullable = false)
     private BigDecimal salario;
 
+    @Column(name = "nombreyapellido", length=200)
+    private String nombreyapellido;
+
+
     public Oncologo() {
     }
 
-    public Oncologo(int oncologo_id, Users user_id, Especialidad especialidad_id, int experiencia_laboral_anios, int cantidad_pacientes, int edad, String horario_atencion, BigDecimal salario) {
+    public Oncologo(int oncologo_id, Users user_id, Especialidad especialidad_id, int experiencia_laboral_anios, int cantidad_pacientes, int edad, String horario_atencion, BigDecimal salario, String nombreyapellido) {
         this.oncologo_id = oncologo_id;
         this.user_id = user_id;
         this.especialidad_id = especialidad_id;
@@ -40,14 +44,7 @@ public class Oncologo {
         this.edad = edad;
         this.horario_atencion = horario_atencion;
         this.salario = salario;
-    }
-
-    public int getOdontologo_id() {
-        return oncologo_id;
-    }
-
-    public void setOdontologo_id(int oncologo_id) {
-        this.oncologo_id = oncologo_id;
+        this.nombreyapellido=nombreyapellido;
     }
 
     public Users getUser_id() {
@@ -105,4 +102,21 @@ public class Oncologo {
     public void setSalario(BigDecimal salario) {
         this.salario = salario;
     }
+
+    public int getOncologo_id() {
+        return oncologo_id;
+    }
+
+    public void setOncologo_id(int oncologo_id) {
+        this.oncologo_id = oncologo_id;
+    }
+
+    public String getNombreyapellido() {
+        return nombreyapellido;
+    }
+
+    public void setNombreyapellido(String nombreyapellido) {
+        this.nombreyapellido = nombreyapellido;
+    }
 }
+

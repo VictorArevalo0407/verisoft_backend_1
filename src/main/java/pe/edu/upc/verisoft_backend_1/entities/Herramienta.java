@@ -9,7 +9,7 @@ public class Herramienta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int herramienta_id;
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "oncologo_id")
     private Oncologo oncologo_id;
     @Column(name="nombreHerramienta",nullable = false,length = 30)
     private String nombreHerramienta;
