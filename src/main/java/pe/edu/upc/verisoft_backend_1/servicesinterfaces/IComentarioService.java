@@ -1,7 +1,5 @@
 package pe.edu.upc.verisoft_backend_1.servicesinterfaces;
 
-import pe.edu.upc.verisoft_backend_1.entities.Comentario;
-
 import java.util.List;
 
 public interface IComentarioService {
