@@ -1,6 +1,5 @@
 package pe.edu.upc.verisoft_backend_1.dtos;
 
-import jakarta.persistence.*;
 import pe.edu.upc.verisoft_backend_1.entities.Especialidad;
 import pe.edu.upc.verisoft_backend_1.entities.Users;
 
@@ -8,15 +7,23 @@ import java.math.BigDecimal;
 
 public class OncologoDTO {
     private int oncologo_id;
+
     private Users user_id;
+
     private Especialidad especialidad_id;
 
     private int experiencia_laboral_anios;
+
     private int cantidad_pacientes;
+
     private int edad;
 
+
     private String horario_atencion;
+
     private BigDecimal salario;
+
+    private String nombreyapellido;
 
     public int getOncologo_id() {
         return oncologo_id;
@@ -80,5 +87,13 @@ public class OncologoDTO {
 
     public void setSalario(BigDecimal salario) {
         this.salario = salario;
+    }
+
+    public String getNombreyapellido() {
+        return nombreyapellido;
+    }
+
+    public void setNombreyapellido(String nombreyapellido) {
+        this.nombreyapellido = nombreyapellido;
     }
 }
