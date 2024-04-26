@@ -2,6 +2,10 @@ package pe.edu.upc.verisoft_backend_1.entities;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
+@Entity
+@Table(name="Oncologo")
 public class Oncologo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -101,3 +105,4 @@ public class Oncologo {
     public void setSalario(BigDecimal salario) {
         this.salario = salario;
     }
+}
