@@ -106,3 +106,4 @@ public class Oncologo {
         this.salario = salario;
     }
 }
+
