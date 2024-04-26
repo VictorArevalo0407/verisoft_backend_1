@@ -9,21 +9,17 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPaciente;
     @ManyToOne
-    @JoinColumn(name = "respuestaId")
-    private Respuesta respuesta;
-    @ManyToOne
     @JoinColumn(name = "userId")
     private Users user;
     @Column(name="contactoEmergencia",nullable = false,length = 100)
     private String contactoEmergencia;
-    @Column(name="estado",nullable = false,length = 1)
+    @Column(name="estado",nullable = false,length = 20)
     private String estado;
 
     public Paciente() {
     }
     public Paciente(int idPaciente, Respuesta respuesta, Users user, String contactoEmergencia, String estado) {
         this.idPaciente = idPaciente;
-        this.respuesta = respuesta;
         this.user = user;
         this.contactoEmergencia = contactoEmergencia;
         this.estado = estado;
@@ -35,14 +31,6 @@ public class Paciente {
 
     public void setIdPaciente(int idPaciente) {
         this.idPaciente = idPaciente;
-    }
-
-    public Respuesta getRespuesta() {
-        return respuesta;
-    }
-
-    public void setRespuesta(Respuesta respuesta) {
-        this.respuesta = respuesta;
     }
 
     public Users getUser() {

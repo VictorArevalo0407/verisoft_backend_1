@@ -20,19 +20,4 @@ public class PacienteServiceImplement implements IPacienteService {
         return pR.findAll();
     }
 
-    @Override
-    public Paciente listId(int id) {
-        return pR.findById(id).orElse(new Paciente());
-    }
-
-    @Override
-    public List<String[]> quantityRespuestasByStatus() {
-        return pR.quantityRespuestasByStatus();
-    }
-
-    @Override
-    public List<String[]> totalUsuariosporGrado() {
-        return pR.totalUsuariosporGrado();
-    }
-
 }
