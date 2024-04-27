@@ -13,7 +13,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/alergia")
+
+@RequestMapping("/alergias")
+
 public class AlergiasController {
     @Autowired
     private IAlergiasService aS;

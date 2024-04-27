@@ -29,5 +29,4 @@ public class RespuestaServiceImplement implements IRespuestaService {
 
         return rR.quantityRespuestasByPacienteEstadoAndGrado();
     }
-
 }
