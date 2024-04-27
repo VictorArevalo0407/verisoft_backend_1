@@ -2,6 +2,7 @@ package pe.edu.upc.verisoft_backend_1.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import pe.edu.upc.verisoft_backend_1.entities.Cita;
 
@@ -15,5 +16,9 @@ public interface ICitaRepository extends JpaRepository<Cita,Integer> {
             "group by m.nombreyapellido ",nativeQuery = true)
 
     public List<String[]> quantityCitasByOncologo();
+
+
+@Query("from Cita c where c.oncologo.nombreyapellido=:nombreapellido")
+    public List<Cita> listCitaa(@Param("nombreapellido") String nombreyapellido);
 
 }

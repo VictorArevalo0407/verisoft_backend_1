@@ -31,4 +31,9 @@ public class CitaServiceImplement implements ICitaService {
     public List<String[]> quantityCitasByOncologo() {
         return cR.quantityCitasByOncologo();
     }
+
+    @Override
+    public List<Cita> listCitaa(String nombreyapellido) {
+        return cR.listCitaa(nombreyapellido);
+    }
 }

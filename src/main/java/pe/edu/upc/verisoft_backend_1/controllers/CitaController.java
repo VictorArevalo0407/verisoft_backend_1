@@ -10,6 +10,7 @@ import pe.edu.upc.verisoft_backend_1.servicesinterfaces.ICitaService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/citas")
@@ -38,5 +39,13 @@ public class CitaController {
 return dtoList;
 
 }
+
+    @GetMapping("/listaCitaa")
+    public List<CitaDTO> listaCitaa(@RequestParam String oncologo){
+        return cS.listCitaa(oncologo).stream().map(p->{
+            ModelMapper c= new ModelMapper();
+            return c.map(p,CitaDTO.class);
+        }).collect(Collectors.toList());
+    }
 
 }
