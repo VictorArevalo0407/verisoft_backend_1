@@ -3,7 +3,6 @@ package pe.edu.upc.verisoft_backend_1.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.verisoft_backend_1.dtos.RespuestaDTO;
 import pe.edu.upc.verisoft_backend_1.dtos.TipoTratamientoDTO;
 import pe.edu.upc.verisoft_backend_1.entities.TipoTratamiento;
 import pe.edu.upc.verisoft_backend_1.servicesinterfaces.ITipoTratamientoService;
