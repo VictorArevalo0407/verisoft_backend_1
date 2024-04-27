@@ -10,4 +10,6 @@ public interface ICitaService {
     public List<Cita> list();
 
     public void delete(int id);
+
+    public List<String[]> quantityCitasByOncologo();
 }

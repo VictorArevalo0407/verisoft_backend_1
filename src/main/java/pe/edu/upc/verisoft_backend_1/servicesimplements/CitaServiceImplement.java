@@ -26,4 +26,9 @@ public class CitaServiceImplement implements ICitaService {
     public void delete(int id) {
         cR.deleteById(id);
     }
+
+    @Override
+    public List<String[]> quantityCitasByOncologo() {
+        return cR.quantityCitasByOncologo();
+    }
 }
