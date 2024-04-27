@@ -19,5 +19,15 @@ public class RespuestaServiceImplement implements IRespuestaService {
     public List<Respuesta> list() {
         return rR.findAll();
     }
+    @Override
+    public List<String[]> quantityRespuestasByPacienteAndGrado() {
+
+        return rR.quantityRespuestasByPacienteAndGrado();
+    }
+    @Override
+    public List<String[]> quantityRespuestasByPacienteEstadoAndGrado() {
+
+        return rR.quantityRespuestasByPacienteEstadoAndGrado();
+    }
 
 }
