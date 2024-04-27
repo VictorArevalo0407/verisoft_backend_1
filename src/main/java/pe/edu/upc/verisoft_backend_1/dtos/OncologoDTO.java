@@ -1,50 +1,36 @@
-package pe.edu.upc.verisoft_backend_1.entities;
+package pe.edu.upc.verisoft_backend_1.dtos;
 
-import jakarta.persistence.*;
+import pe.edu.upc.verisoft_backend_1.entities.Especialidad;
+import pe.edu.upc.verisoft_backend_1.entities.Users;
 
 import java.math.BigDecimal;
 
-@Entity
-@Table(name="Oncologo")
-public class Oncologo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class OncologoDTO {
     private int oncologo_id;
-    @ManyToOne
-    @JoinColumn(name = "user_id")
+
     private Users user_id;
-    @ManyToOne
-    @JoinColumn(name = "especialidad_id")
+
     private Especialidad especialidad_id;
-    @Column(name = "experiencia_laboral_anios", nullable = false)
+
     private int experiencia_laboral_anios;
-    @Column(name = "cantidad_pacientes", nullable = false)
+
     private int cantidad_pacientes;
-    @Column(name = "edad", nullable = false)
+
     private int edad;
 
-    @Column(name = "horario_atencion", length = 100)
+
     private String horario_atencion;
-    @Column(name = "salario", nullable = false)
+
     private BigDecimal salario;
 
-    @Column(name = "nombreyapellido", length=200)
     private String nombreyapellido;
 
-
-    public Oncologo() {
+    public int getOncologo_id() {
+        return oncologo_id;
     }
 
-    public Oncologo(int oncologo_id, Users user_id, Especialidad especialidad_id, int experiencia_laboral_anios, int cantidad_pacientes, int edad, String horario_atencion, BigDecimal salario, String nombreyapellido) {
+    public void setOncologo_id(int oncologo_id) {
         this.oncologo_id = oncologo_id;
-        this.user_id = user_id;
-        this.especialidad_id = especialidad_id;
-        this.experiencia_laboral_anios = experiencia_laboral_anios;
-        this.cantidad_pacientes = cantidad_pacientes;
-        this.edad = edad;
-        this.horario_atencion = horario_atencion;
-        this.salario = salario;
-        this.nombreyapellido=nombreyapellido;
     }
 
     public Users getUser_id() {
@@ -103,14 +89,6 @@ public class Oncologo {
         this.salario = salario;
     }
 
-    public int getOncologo_id() {
-        return oncologo_id;
-    }
-
-    public void setOncologo_id(int oncologo_id) {
-        this.oncologo_id = oncologo_id;
-    }
-
     public String getNombreyapellido() {
         return nombreyapellido;
     }
@@ -119,4 +97,3 @@ public class Oncologo {
         this.nombreyapellido = nombreyapellido;
     }
 }
-
