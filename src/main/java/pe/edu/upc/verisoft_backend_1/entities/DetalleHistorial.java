@@ -25,20 +25,20 @@ public class DetalleHistorial {
     @JoinColumn(name = "examenDeteccionid")
     private ExamenDeteccion examenDeteccion;
     @ManyToOne
-    @JoinColumn(name = "historialClinicoid")
-    private HistorialClinico historialClinico;
+    @JoinColumn(name = "paciente")
+    private Paciente paciente;
 
     public DetalleHistorial() {
     }
 
-    public DetalleHistorial(int idDetalleHistorial, LocalDate fechaDetalleHistorial, Seguro seguro, Cirugias cirugias, Tratamiento tratamiento, ExamenDeteccion examenDeteccion, HistorialClinico historialClinico) {
+    public DetalleHistorial(int idDetalleHistorial, LocalDate fechaDetalleHistorial, Seguro seguro, Cirugias cirugias, Tratamiento tratamiento, ExamenDeteccion examenDeteccion, Paciente paciente) {
         this.idDetalleHistorial = idDetalleHistorial;
         this.fechaDetalleHistorial = fechaDetalleHistorial;
         this.seguro = seguro;
         this.cirugias = cirugias;
         this.tratamiento = tratamiento;
         this.examenDeteccion = examenDeteccion;
-        this.historialClinico = historialClinico;
+        this.paciente = paciente;
     }
 
     public int getIdDetalleHistorial() {
@@ -89,11 +89,11 @@ public class DetalleHistorial {
         this.examenDeteccion = examenDeteccion;
     }
 
-    public HistorialClinico getHistorialClinico() {
-        return historialClinico;
+    public Paciente getPaciente() {
+        return paciente;
     }
 
-    public void setHistorialClinico(HistorialClinico historialClinico) {
-        this.historialClinico = historialClinico;
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 }

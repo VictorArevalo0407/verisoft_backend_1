@@ -18,7 +18,7 @@ public class DetalleHistorialDTO {
 
     private ExamenDeteccion examenDeteccion;
 
-    private HistorialClinico historialClinico;
+    private Paciente paciente;
 
     public int getIdDetalleHistorial() {
         return idDetalleHistorial;
@@ -68,11 +68,11 @@ public class DetalleHistorialDTO {
         this.examenDeteccion = examenDeteccion;
     }
 
-    public HistorialClinico getHistorialClinico() {
-        return historialClinico;
+    public Paciente getPaciente() {
+        return paciente;
     }
 
-    public void setHistorialClinico(HistorialClinico historialClinico) {
-        this.historialClinico = historialClinico;
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 }
