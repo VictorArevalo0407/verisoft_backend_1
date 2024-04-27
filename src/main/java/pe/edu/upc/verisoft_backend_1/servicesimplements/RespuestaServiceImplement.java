@@ -30,4 +30,14 @@ public class RespuestaServiceImplement implements IRespuestaService {
         return rR.quantityRespuestasByPacienteEstadoAndGrado();
     }
 
+    @Override
+    public List<String[]> quantityRespuestasByPacienteAndGrado() {
+
+        return rR.quantityRespuestasByPacienteAndGrado();
+    }
+    @Override
+    public List<String[]> quantityRespuestasByPacienteEstadoAndGrado() {
+
+        return rR.quantityRespuestasByPacienteEstadoAndGrado();
+    }
 }

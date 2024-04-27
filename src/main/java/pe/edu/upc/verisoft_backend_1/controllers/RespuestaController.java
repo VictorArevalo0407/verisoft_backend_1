@@ -69,7 +69,6 @@ import java.util.stream.Collectors;
                     dtoLista.add(dto);
                 }
                 return dtoLista;
-
             }
         }
 
