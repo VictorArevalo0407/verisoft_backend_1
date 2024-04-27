@@ -7,5 +7,7 @@ import java.util.List;
 public interface IRespuestaService {
     public void insert(Respuesta respuesta);
     public List<Respuesta> list();
+    public List<String[]> quantityRespuestasByPacienteAndGrado();
+    public List<String[]> quantityRespuestasByPacienteEstadoAndGrado();
 }
 
