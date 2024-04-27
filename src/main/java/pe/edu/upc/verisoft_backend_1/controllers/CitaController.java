@@ -11,7 +11,7 @@ import pe.edu.upc.verisoft_backend_1.entities.Cita;
 import pe.edu.upc.verisoft_backend_1.servicesinterfaces.ICitaService;
 
 @RestController
-@RequestMapping("/citas")
+@RequestMapping("/CITAS")
 
 public class CitaController {
     @Autowired

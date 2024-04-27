@@ -23,7 +23,7 @@ public class EspecialidadController {
         eS.insert(especialidad);
     }
     @GetMapping
-    @PreAuthorize("hasAuthority('ADMINISTRADOR')OR hasAuthority('ONCOLOGO')")
+    @PreAuthorize("hasAuthority('ADMINISTRADOR')")
     public List<EspecialidadDTO> listar(){
         return eS.list().stream().map(y->{
                     ModelMapper m= new ModelMapper();

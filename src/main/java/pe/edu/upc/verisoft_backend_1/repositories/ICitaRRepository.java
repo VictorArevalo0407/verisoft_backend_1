@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pe.edu.upc.verisoft_backend_1.entities.Cita;
 
 @Repository
-public interface ICitaRepository extends JpaRepository<Cita,Integer> {
+public interface ICitaRRepository extends JpaRepository<Cita,Integer> {
 }

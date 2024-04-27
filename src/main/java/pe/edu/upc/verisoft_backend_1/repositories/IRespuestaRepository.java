@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 import pe.edu.upc.verisoft_backend_1.entities.Respuesta;
 
 import java.util.List;
-
 @Repository
 public interface IRespuestaRepository extends JpaRepository<Respuesta,Integer> {
 

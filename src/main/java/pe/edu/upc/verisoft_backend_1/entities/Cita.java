@@ -23,7 +23,7 @@ public class Cita {
     @ManyToOne
     @JoinColumn(name ="PacienteId" )
     private Paciente paciente;
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name ="OncologoId")
     private Oncologo oncologo;
 
