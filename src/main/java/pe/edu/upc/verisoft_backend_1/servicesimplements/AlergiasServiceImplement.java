@@ -33,4 +33,9 @@ public class AlergiasServiceImplement implements IAlergiasService {
     public Alergias listId(int id) {
         return aR.findById(id).orElse(new Alergias());
     }
+
+    @Override
+    public List<String[]> quantityAlergiasByPaciente() {
+        return aR.quantityAlergiasByPaciente();
+    }
 }

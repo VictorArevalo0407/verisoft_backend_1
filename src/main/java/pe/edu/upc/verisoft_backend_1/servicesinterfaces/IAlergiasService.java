@@ -9,5 +9,6 @@ public interface IAlergiasService {
     public List<Alergias> list();
     public void delete(int id);
     public Alergias listId(int id);
+    public List<String[]> quantityAlergiasByPaciente();
 }
 

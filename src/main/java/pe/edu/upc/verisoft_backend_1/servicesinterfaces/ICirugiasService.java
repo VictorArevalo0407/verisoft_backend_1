@@ -8,5 +8,6 @@ public interface ICirugiasService {
     public List<Cirugias> list();
     public void delete(int id);
     public Cirugias listId(int id);
+    public List<String[]> quantityCirugiasByPaciente();
 
 }

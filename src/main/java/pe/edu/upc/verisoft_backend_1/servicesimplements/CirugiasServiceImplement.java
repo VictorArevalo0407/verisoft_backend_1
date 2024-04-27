@@ -32,4 +32,9 @@ public class CirugiasServiceImplement implements ICirugiasService {
     public Cirugias listId(int id) {
         return cR.findById(id).orElse(new Cirugias());
     }
+
+    @Override
+    public List<String[]> quantityCirugiasByPaciente() {
+        return cR.quantityCirugiasByPaciente();
+    }
 }
