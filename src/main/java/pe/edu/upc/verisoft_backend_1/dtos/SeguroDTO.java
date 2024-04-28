@@ -1,7 +1,5 @@
 package pe.edu.upc.verisoft_backend_1.dtos;
 
-
-
 public class SeguroDTO {
     private int idSeguro;
 

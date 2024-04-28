@@ -1,6 +1,5 @@
 package pe.edu.upc.verisoft_backend_1.dtos;
 
-import jakarta.persistence.*;
 import pe.edu.upc.verisoft_backend_1.entities.Oncologo;
 import pe.edu.upc.verisoft_backend_1.entities.Paciente;
 

@@ -37,9 +37,6 @@ public class SeguroController {
         mS.delete(id);
 
     }
-
-
-
 }
 
 
