@@ -28,7 +28,7 @@ public class AlergiasController {
         aS.insert(alergias);
     }
 
-    @GetMapping
+    @GetMapping("/listarALERGIAAAA")
     public List<Alergias> listar() {
         return aS.list().stream().map(b -> {
             ModelMapper a = new ModelMapper();
