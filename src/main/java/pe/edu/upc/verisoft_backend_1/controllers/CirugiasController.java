@@ -32,7 +32,7 @@ public class CirugiasController {
         return c.map(p,Cirugias.class);
     }).collect(Collectors.toList());
         }
-@DeleteMapping("/id")
+@DeleteMapping("/{id}")
         public void eliminar(@PathVariable("id") Integer id) {
         cS.delete(id);
 

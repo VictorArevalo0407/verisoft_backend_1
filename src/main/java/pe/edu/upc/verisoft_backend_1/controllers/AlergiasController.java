@@ -36,7 +36,7 @@ public class AlergiasController {
         }).collect(Collectors.toList());
     }
 
-    @DeleteMapping("/id")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") Integer id) {
         aS.delete(id);
 
