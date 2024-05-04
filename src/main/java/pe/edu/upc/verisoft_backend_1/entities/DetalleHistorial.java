@@ -13,16 +13,16 @@ public class DetalleHistorial {
     @Column(name = "fechaDetalleHistorial",nullable=false)
     private LocalDate fechaDetalleHistorial;
     @ManyToOne
-    @JoinColumn(name = "seguroid")
+    @JoinColumn(name = "Seguro_ID")
     private  Seguro seguro;
     @ManyToOne
-    @JoinColumn(name = "cirugiasid")
+    @JoinColumn(name = "cirugias")
     private  Cirugias cirugias;
     @ManyToOne
     @JoinColumn(name = "tratamiento")
     private  Tratamiento tratamiento;
     @ManyToOne
-    @JoinColumn(name = "examenDeteccionid")
+    @JoinColumn(name = "examenDeteccion")
     private ExamenDeteccion examenDeteccion;
     @ManyToOne
     @JoinColumn(name = "paciente")

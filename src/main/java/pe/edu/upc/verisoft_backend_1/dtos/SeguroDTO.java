@@ -3,18 +3,18 @@ package pe.edu.upc.verisoft_backend_1.dtos;
 
 
 public class SeguroDTO {
-    private int idSeguro;
+    private int Seguro_ID;
 
     private String TipoSeguro;
 
     private String DescSeguro;
 
-    public int getIdSeguro() {
-        return idSeguro;
+    public int getSeguro_ID() {
+        return Seguro_ID;
     }
 
-    public void setIdSeguro(int idSeguro) {
-        this.idSeguro = idSeguro;
+    public void setSeguro_ID(int seguro_ID) {
+        Seguro_ID = seguro_ID;
     }
 
     public String getTipoSeguro() {
