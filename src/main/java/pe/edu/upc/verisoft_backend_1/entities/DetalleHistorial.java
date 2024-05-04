@@ -8,9 +8,10 @@ import java.time.LocalDate;
 public class DetalleHistorial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_detalle_historial")
     private int idDetalleHistorial;
 
-    @Column(name = "fechaDetalleHistorial", nullable = false)
+    @Column(name = "fecha_detalle_historial", nullable = false)
     private LocalDate fechaDetalleHistorial;
 
     @ManyToOne
@@ -26,7 +27,7 @@ public class DetalleHistorial {
     private Tratamiento tratamiento;
 
     @ManyToOne
-    @JoinColumn(name = "examenDeteccion_id")
+    @JoinColumn(name = "examen_deteccion_id")
     private ExamenDeteccion examenDeteccion;
 
     @ManyToOne
