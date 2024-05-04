@@ -1,31 +1,36 @@
 package pe.edu.upc.verisoft_backend_1.entities;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
+
 @Entity
 @Table(name = "DetalleHistorial")
-
 public class DetalleHistorial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDetalleHistorial;
-    @Column(name = "fechaDetalleHistorial",nullable=false)
+
+    @Column(name = "fechaDetalleHistorial", nullable = false)
     private LocalDate fechaDetalleHistorial;
+
     @ManyToOne
-    @JoinColumn(name = "Seguro_ID")
-    private  Seguro seguro;
+    @JoinColumn(name = "seguro_id")
+    private Seguro seguro;
+
     @ManyToOne
-    @JoinColumn(name = "cirugias")
-    private  Cirugias cirugias;
+    @JoinColumn(name = "cirugias_id")
+    private Cirugias cirugias;
+
     @ManyToOne
-    @JoinColumn(name = "tratamiento")
-    private  Tratamiento tratamiento;
+    @JoinColumn(name = "tratamiento_id")
+    private Tratamiento tratamiento;
+
     @ManyToOne
-    @JoinColumn(name = "examenDeteccion")
+    @JoinColumn(name = "examenDeteccion_id")
     private ExamenDeteccion examenDeteccion;
+
     @ManyToOne
-    @JoinColumn(name = "paciente")
+    @JoinColumn(name = "paciente_id")
     private Paciente paciente;
 
     public DetalleHistorial() {
