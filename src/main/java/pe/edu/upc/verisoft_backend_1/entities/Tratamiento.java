@@ -19,8 +19,6 @@ public class Tratamiento {
     private int PresupuestoTratamiento;
     @Column(name = "FechaTratamiento",nullable = false)
     private LocalDate FechaTratamiento;
-    @Column(name = "FechaFinTratamiento",nullable = false)
-    private LocalTime FechaFinTratamiento;
     @Column(name = "HorasTratamiento",nullable = false)
     private int HorasTratamiento;
     @Column(name = "EfectosEsperadosTratamiento",nullable = false, length = 200)
@@ -32,14 +30,13 @@ public class Tratamiento {
     public Tratamiento() {
     }
 
-    public Tratamiento(int idTratamiento, String descripcionTratamiento, String estadoTratamiento, int presupuestoTratamiento, LocalDate fechaTratamiento, LocalTime fechaFinTratamiento, int horasTratamiento, String efectosEsperadosTratamiento, Oncologo oncologo) {
+    public Tratamiento(int idTratamiento, String descripcionTratamiento, String estadoTratamiento, int presupuestoTratamiento, LocalDate fechaTratamiento, int horasTratamiento, String efectosEsperadosTratamiento, Oncologo oncologo) {
         this.idTratamiento = idTratamiento;
 
         DescripcionTratamiento = descripcionTratamiento;
         EstadoTratamiento = estadoTratamiento;
         PresupuestoTratamiento = presupuestoTratamiento;
         FechaTratamiento = fechaTratamiento;
-        FechaFinTratamiento = fechaFinTratamiento;
         HorasTratamiento = horasTratamiento;
         EfectosEsperadosTratamiento = efectosEsperadosTratamiento;
         this.oncologo = oncologo;
@@ -85,13 +82,7 @@ public class Tratamiento {
         FechaTratamiento = fechaTratamiento;
     }
 
-    public LocalTime getFechaFinTratamiento() {
-        return FechaFinTratamiento;
-    }
 
-    public void setFechaFinTratamiento(LocalTime fechaFinTratamiento) {
-        FechaFinTratamiento = fechaFinTratamiento;
-    }
 
     public int getHorasTratamiento() {
         return HorasTratamiento;

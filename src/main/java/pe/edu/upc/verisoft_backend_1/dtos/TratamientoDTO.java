@@ -17,7 +17,7 @@ public class TratamientoDTO {
 
     private LocalDate FechaTratamiento;
 
-    private LocalTime FechaFinTratamiento;
+
 
     private int HorasTratamiento;
 
@@ -65,13 +65,9 @@ public class TratamientoDTO {
         FechaTratamiento = fechaTratamiento;
     }
 
-    public LocalTime getFechaFinTratamiento() {
-        return FechaFinTratamiento;
-    }
 
-    public void setFechaFinTratamiento(LocalTime fechaFinTratamiento) {
-        FechaFinTratamiento = fechaFinTratamiento;
-    }
+
+
 
     public int getHorasTratamiento() {
         return HorasTratamiento;
