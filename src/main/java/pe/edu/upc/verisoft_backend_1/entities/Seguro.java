@@ -8,43 +8,43 @@ import jakarta.persistence.*;
 public class Seguro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Seguro_ID;
-    @Column(name = "TipoSeguro", nullable = false, length = 25)
-    private String TipoSeguro;
-    @Column(name = "DescSeguro", nullable = false, length = 25)
-    private String DescSeguro;
+    private int idseguro;
+    @Column(name = "nombre", nullable = false, length = 25)
+    private String nombreseguro;
+    @Column(name = "tipo", nullable = false, length = 25)
+    private String tiposeguro;
 
     public Seguro() {
 
     }
 
-    public Seguro(int seguro_ID, String tipoSeguro, String descSeguro) {
-        Seguro_ID = seguro_ID;
-        TipoSeguro = tipoSeguro;
-        DescSeguro = descSeguro;
+    public Seguro(int idseguro, String nombreseguro, String tiposeguro) {
+        this.idseguro = idseguro;
+        this.nombreseguro = nombreseguro;
+        this.tiposeguro = tiposeguro;
     }
 
-    public int getSeguro_ID() {
-        return Seguro_ID;
+    public int getIdseguro() {
+        return idseguro;
     }
 
-    public void setSeguro_ID(int seguro_ID) {
-        Seguro_ID = seguro_ID;
+    public void setIdseguro(int idseguro) {
+        this.idseguro = idseguro;
     }
 
-    public String getTipoSeguro() {
-        return TipoSeguro;
+    public String getNombreseguro() {
+        return nombreseguro;
     }
 
-    public void setTipoSeguro(String tipoSeguro) {
-        TipoSeguro = tipoSeguro;
+    public void setNombreseguro(String nombreseguro) {
+        this.nombreseguro = nombreseguro;
     }
 
-    public String getDescSeguro() {
-        return DescSeguro;
+    public String getTiposeguro() {
+        return tiposeguro;
     }
 
-    public void setDescSeguro(String descSeguro) {
-        DescSeguro = descSeguro;
+    public void setTiposeguro(String tiposeguro) {
+        this.tiposeguro = tiposeguro;
     }
 }
