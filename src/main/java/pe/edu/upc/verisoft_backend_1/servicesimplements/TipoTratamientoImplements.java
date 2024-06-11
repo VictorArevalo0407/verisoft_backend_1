@@ -29,6 +29,7 @@ public class TipoTratamientoImplements implements ITipoTratamientoService {
 
     @Override
     public TipoTratamiento listId(int id) {
+
         return tR.findById(id).orElse(new TipoTratamiento());
     }
 }
