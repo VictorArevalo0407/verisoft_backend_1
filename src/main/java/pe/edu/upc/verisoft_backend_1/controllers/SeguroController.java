@@ -17,7 +17,7 @@ public class SeguroController {
     @Autowired
     private ISeguroService mS;
 
-    @PostMapping("/aa")
+    @PostMapping()
     public void insertar(@RequestBody SeguroDTO seguroDTO){
 
         ModelMapper d = new ModelMapper();
