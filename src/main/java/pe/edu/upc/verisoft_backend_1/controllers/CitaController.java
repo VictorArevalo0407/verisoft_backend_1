@@ -40,7 +40,7 @@ return dtoList;
 
 }
 
-    @GetMapping("/listaCitaa")
+    @GetMapping
     public List<CitaDTO> listaCitaa(@RequestParam String oncologo){
         return cS.listCitaa(oncologo).stream().map(p->{
             ModelMapper c= new ModelMapper();
