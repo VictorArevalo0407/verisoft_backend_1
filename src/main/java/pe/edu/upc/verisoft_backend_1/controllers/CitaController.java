@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.verisoft_backend_1.dtos.CitaByOncologoDTO;
 import pe.edu.upc.verisoft_backend_1.dtos.CitaDTO;
+import pe.edu.upc.verisoft_backend_1.dtos.ComentarioDTO;
 import pe.edu.upc.verisoft_backend_1.entities.Cita;
+import pe.edu.upc.verisoft_backend_1.servicesimplements.CitaServiceImplement;
 import pe.edu.upc.verisoft_backend_1.servicesinterfaces.ICitaService;
 
 import java.util.ArrayList;
@@ -18,6 +20,9 @@ import java.util.stream.Collectors;
 public class CitaController {
     @Autowired
     private ICitaService cS;
+    @Autowired
+    private CitaServiceImplement citaServiceImplement;
+
     @PostMapping
    public void insertarr(@RequestBody CitaDTO citaDTO) {
         ModelMapper m = new ModelMapper();
@@ -39,8 +44,15 @@ public class CitaController {
 return dtoList;
 
 }
-
     @GetMapping
+    public List<ComentarioDTO> listar() {
+        return cS.list().stream().map(cita -> {
+            ModelMapper mapper = new ModelMapper();
+            return mapper.map(cita, ComentarioDTO.class);
+        }).collect(Collectors.toList());
+    }
+
+    @GetMapping("/aa")
     public List<CitaDTO> listaCitaa(@RequestParam String oncologo){
         return cS.listCitaa(oncologo).stream().map(p->{
             ModelMapper c= new ModelMapper();
