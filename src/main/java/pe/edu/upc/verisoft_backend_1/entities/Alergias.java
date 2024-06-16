@@ -9,14 +9,9 @@ public class Alergias {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idalergias;
     @Column(name = "Descripcionalergias", nullable = false,length = 150)
-    private String Descripcionalergias;
+    private String descripcionAlergias;
 
     public Alergias() {
-    }
-
-    public Alergias(int idalergias, String descripcionalergias) {
-        this.idalergias = idalergias;
-        Descripcionalergias = descripcionalergias;
     }
 
     public int getIdalergias() {
@@ -27,11 +22,11 @@ public class Alergias {
         this.idalergias = idalergias;
     }
 
-    public String getDescripcionalergias() {
-        return Descripcionalergias;
+    public String getDescripcionAlergias() {
+        return descripcionAlergias;
     }
 
-    public void setDescripcionalergias(String descripcionalergias) {
-        Descripcionalergias = descripcionalergias;
+    public void setDescripcionAlergias(String descripcionAlergias) {
+        this.descripcionAlergias = descripcionAlergias;
     }
 }

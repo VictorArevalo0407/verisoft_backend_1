@@ -3,7 +3,7 @@ package pe.edu.upc.verisoft_backend_1.dtos;
 
 public class AlergiasDTO {
     private int idalergias;
-    private String Descripcionalergias;
+    private String descripcionAlergias;
 
     public int getIdalergias() {
         return idalergias;
@@ -13,11 +13,11 @@ public class AlergiasDTO {
         this.idalergias = idalergias;
     }
 
-    public String getDescripcionalergias() {
-        return Descripcionalergias;
+    public String getDescripcionAlergias() {
+        return descripcionAlergias;
     }
 
-    public void setDescripcionalergias(String descripcionalergias) {
-        Descripcionalergias = descripcionalergias;
+    public void setDescripcionAlergias(String descripcionAlergias) {
+        this.descripcionAlergias = descripcionAlergias;
     }
 }

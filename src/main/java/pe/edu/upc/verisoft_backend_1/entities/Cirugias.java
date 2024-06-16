@@ -9,14 +9,9 @@ public class Cirugias {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idcirugias;
     @Column(name ="Descripcioncirugias",nullable = false,length = 140)
-    private String Descripcioncirugias;
+    private String descripcionCirugias;
 
     public Cirugias() {
-    }
-
-    public Cirugias(int idcirugias, String descripcioncirugias) {
-        this.idcirugias = idcirugias;
-        Descripcioncirugias = descripcioncirugias;
     }
 
     public int getIdcirugias() {
@@ -27,11 +22,11 @@ public class Cirugias {
         this.idcirugias = idcirugias;
     }
 
-    public String getDescripcioncirugias() {
-        return Descripcioncirugias;
+    public String getDescripcionCirugias() {
+        return descripcionCirugias;
     }
 
-    public void setDescripcioncirugias(String descripcioncirugias) {
-        Descripcioncirugias = descripcioncirugias;
+    public void setDescripcionCirugias(String descripcionCirugias) {
+        this.descripcionCirugias = descripcionCirugias;
     }
 }
