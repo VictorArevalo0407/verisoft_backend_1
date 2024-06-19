@@ -3,7 +3,7 @@ package pe.edu.upc.verisoft_backend_1.dtos;
 
 public class CirugiasDTO {
     private int idcirugias;
-    private String descripcionCirugias;
+    private String Descripcioncirugias;
 
     public int getIdcirugias() {
         return idcirugias;
@@ -13,11 +13,11 @@ public class CirugiasDTO {
         this.idcirugias = idcirugias;
     }
 
-    public String getDescripcionCirugias() {
-        return descripcionCirugias;
+    public String getDescripcioncirugias() {
+        return Descripcioncirugias;
     }
 
-    public void setDescripcionCirugias(String descripcionCirugias) {
-        this.descripcionCirugias = descripcionCirugias;
+    public void setDescripcioncirugias(String descripcioncirugias) {
+        Descripcioncirugias = descripcioncirugias;
     }
 }
