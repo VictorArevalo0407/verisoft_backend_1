@@ -45,10 +45,10 @@ return dtoList;
 
 }
     @GetMapping
-    public List<ComentarioDTO> listar() {
+    public List<CitaDTO> listar() {
         return cS.list().stream().map(cita -> {
             ModelMapper mapper = new ModelMapper();
-            return mapper.map(cita, ComentarioDTO.class);
+            return mapper.map(cita, CitaDTO.class);
         }).collect(Collectors.toList());
     }
 
