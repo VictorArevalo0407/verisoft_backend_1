@@ -10,16 +10,16 @@ public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCita;
-    @Column(name = "Fecha",nullable = false)
-    private LocalDate Fecha;
+    @Column(name = "fecha",nullable = false)
+    private LocalDate fecha;
     @Column(name ="hora", nullable = false)
     private int hora;
     @Column(name ="motivo", nullable = false, length = 100)
     private String motivo;
     @Column(name ="estado", nullable = false, length = 20)
     private String estado;
-    @Column(name ="Consultorio", nullable = false, length = 20)
-    private String  Consultorio;
+    @Column(name ="consultorio", nullable = false, length = 20)
+    private String  consultorio;
     @ManyToOne
     @JoinColumn(name ="PacienteId" )
     private Paciente paciente;
@@ -32,14 +32,15 @@ public class Cita {
 
     public Cita(int idCita, LocalDate fecha, int hora, String motivo, String estado, String consultorio, Paciente paciente, Oncologo oncologo) {
         this.idCita = idCita;
-        Fecha = fecha;
+        this.fecha = fecha;
         this.hora = hora;
         this.motivo = motivo;
         this.estado = estado;
-        Consultorio = consultorio;
+        this.consultorio = consultorio;
         this.paciente = paciente;
         this.oncologo = oncologo;
     }
+
 
     public int getIdCita() {
         return idCita;
@@ -50,11 +51,11 @@ public class Cita {
     }
 
     public LocalDate getFecha() {
-        return Fecha;
+        return fecha;
     }
 
     public void setFecha(LocalDate fecha) {
-        Fecha = fecha;
+        this.fecha = fecha;
     }
 
     public int getHora() {
@@ -82,11 +83,11 @@ public class Cita {
     }
 
     public String getConsultorio() {
-        return Consultorio;
+        return consultorio;
     }
 
     public void setConsultorio(String consultorio) {
-        Consultorio = consultorio;
+        this.consultorio = consultorio;
     }
 
     public Paciente getPaciente() {

@@ -10,7 +10,7 @@ public class CitaDTO {
 
     private int idCita;
 
-    private LocalDate Fecha;
+    private LocalDate fecha;
 
     private int hora;
 
@@ -18,7 +18,7 @@ public class CitaDTO {
 
     private String estado;
 
-    private String  Consultorio;
+    private String  consultorio;
 
     private Paciente paciente;
 
@@ -33,11 +33,11 @@ public class CitaDTO {
     }
 
     public LocalDate getFecha() {
-        return Fecha;
+        return fecha;
     }
 
     public void setFecha(LocalDate fecha) {
-        Fecha = fecha;
+        this.fecha = fecha;
     }
 
     public int getHora() {
@@ -65,11 +65,11 @@ public class CitaDTO {
     }
 
     public String getConsultorio() {
-        return Consultorio;
+        return consultorio;
     }
 
     public void setConsultorio(String consultorio) {
-        Consultorio = consultorio;
+        this.consultorio = consultorio;
     }
 
     public Paciente getPaciente() {
