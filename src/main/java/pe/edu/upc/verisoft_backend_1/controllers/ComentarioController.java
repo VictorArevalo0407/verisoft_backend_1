@@ -17,7 +17,7 @@ public class ComentarioController {
     private IComentarioService comentarioService;
 
     @PostMapping
-    public void insertar(ComentarioDTO comentarioDTO) {
+    public void insert(@RequestBody ComentarioDTO comentarioDTO) {
         ModelMapper mapper = new ModelMapper();
         Comentario newComentario = mapper.map(comentarioDTO, Comentario.class);
         comentarioService.insert(newComentario);
