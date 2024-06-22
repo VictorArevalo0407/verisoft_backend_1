@@ -1,5 +1,6 @@
 package pe.edu.upc.verisoft_backend_1.servicesimplements;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.verisoft_backend_1.entities.Respuesta;
 import pe.edu.upc.verisoft_backend_1.repositories.IRespuestaRepository;
@@ -19,14 +20,15 @@ public class RespuestaServiceImplement implements IRespuestaService {
     public List<Respuesta> list() {
         return rR.findAll();
     }
-    @Override
-    public List<String[]> quantityRespuestasByPacienteAndGrado() {
 
-        return rR.quantityRespuestasByPacienteAndGrado();
-    }
     @Override
-    public List<String[]> quantityRespuestasByPacienteEstadoAndGrado() {
-
-        return rR.quantityRespuestasByPacienteEstadoAndGrado();
+    public List<Respuesta> listaRespuestasEstado(String estado) {
+        return rR.listRespuestaEstado(estado);
     }
+
+    @Override
+    public List<Respuesta> listaRespuestaGrado(String grado) {
+        return rR.listaRespuestaGrado(grado);
+    }
+
 }
