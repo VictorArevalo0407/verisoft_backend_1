@@ -34,17 +34,8 @@ public class CitaController {
         dto.setQuantityCita(Integer.parseInt(columna[1]));
         dtoList.add(dto);
 
-    }
-return dtoList;
-
+    }return dtoList;
 }
-    @GetMapping
-    public List<CitaDTO> listar() {
-        return cS.list().stream().map(cita -> {
-            ModelMapper mapper = new ModelMapper();
-            return mapper.map(cita, CitaDTO.class);
-        }).collect(Collectors.toList());
-    }
 
     @GetMapping("/ConsultaNombre")
     public List<CitaDTO> listaCitaa(@RequestParam String oncologo){
@@ -53,6 +44,16 @@ return dtoList;
             return c.map(p,CitaDTO.class);
         }).collect(Collectors.toList());
     }
+
+
+    @GetMapping
+    public List<CitaDTO> listar() {
+        return cS.list().stream().map(cita -> {
+            ModelMapper mapper = new ModelMapper();
+            return mapper.map(cita, CitaDTO.class);
+        }).collect(Collectors.toList());
+    }
+
 
     @DeleteMapping("/{id}")
     //@PreAuthorize("hasAuthority('Oncologo')")
