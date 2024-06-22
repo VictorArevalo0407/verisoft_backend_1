@@ -7,4 +7,8 @@ import java.util.List;
 public interface IPacienteService {
     public void insert(Paciente paciente);
     public List<Paciente> list();
+
+    public void delete(int id);
+
+    public Paciente listId(int id);
 }

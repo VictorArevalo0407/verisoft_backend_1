@@ -36,4 +36,7 @@ public class CitaServiceImplement implements ICitaService {
     public List<Cita> listCitaa(String nombreyapellido) {
         return cR.listCitaa(nombreyapellido);
     }
+
+    @Override
+    public Cita listarId(int idCita) {return cR.findById(idCita).orElse(new Cita());}
 }

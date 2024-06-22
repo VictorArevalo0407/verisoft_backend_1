@@ -26,13 +26,19 @@ public class Tratamiento {
     @ManyToOne
     @JoinColumn(name = "oncologoId")
     private Oncologo oncologo;
+    @ManyToOne
+    @JoinColumn(name = "tipoTratamientoId")
+    private TipoTratamiento tipoTratamiento;
+
+    @ManyToOne
+    @JoinColumn(name = "citaId")
+    private Cita cita;
 
     public Tratamiento() {
     }
 
-    public Tratamiento(int idTratamiento, String descripcionTratamiento, String estadoTratamiento, int presupuestoTratamiento, LocalDate fechaTratamiento, int horasTratamiento, String efectosEsperadosTratamiento, Oncologo oncologo) {
+    public Tratamiento(int idTratamiento, String descripcionTratamiento, String estadoTratamiento, int presupuestoTratamiento, LocalDate fechaTratamiento, int horasTratamiento, String efectosEsperadosTratamiento, Oncologo oncologo, TipoTratamiento tipoTratamiento, Cita cita) {
         this.idTratamiento = idTratamiento;
-
         DescripcionTratamiento = descripcionTratamiento;
         EstadoTratamiento = estadoTratamiento;
         PresupuestoTratamiento = presupuestoTratamiento;
@@ -40,6 +46,8 @@ public class Tratamiento {
         HorasTratamiento = horasTratamiento;
         EfectosEsperadosTratamiento = efectosEsperadosTratamiento;
         this.oncologo = oncologo;
+        this.tipoTratamiento = tipoTratamiento;
+        this.cita = cita;
     }
 
     public int getIdTratamiento() {
@@ -106,5 +114,21 @@ public class Tratamiento {
 
     public void setOncologo(Oncologo oncologo) {
         this.oncologo = oncologo;
+    }
+
+    public TipoTratamiento getTipoTratamiento() {
+        return tipoTratamiento;
+    }
+
+    public void setTipoTratamiento(TipoTratamiento tipoTratamiento) {
+        this.tipoTratamiento = tipoTratamiento;
+    }
+
+    public Cita getCita() {
+        return cita;
+    }
+
+    public void setCita(Cita cita) {
+        this.cita = cita;
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/Tratamientos")
+@RequestMapping("/tratamientos")
 public class TratamientoController
 {
     @Autowired
@@ -23,6 +23,13 @@ public class TratamientoController
         tS.insert(t);
     }
 
+    @PutMapping
+    public void modificar(@RequestBody TratamientoDTO dto) {
+        ModelMapper m = new ModelMapper();
+        Tratamiento u = m.map(dto, Tratamiento.class);
+        tS.insert(u);
+    }
+
     @GetMapping
     public List<TratamientoDTO> listar() {
         return tS.list().stream().map(y -> {
@@ -31,4 +38,15 @@ public class TratamientoController
         }).collect(Collectors.toList());
     }
 
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id){
+        tS.delete(id);
+    }
+    @GetMapping("/{id}")
+    public TratamientoDTO listarId(@PathVariable("id") Integer id){
+        ModelMapper m = new ModelMapper();
+        TratamientoDTO dto=m.map(tS.listId(id),TratamientoDTO.class);
+        return dto;
+
+    }
 }

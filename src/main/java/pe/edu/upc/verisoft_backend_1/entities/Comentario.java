@@ -9,7 +9,7 @@ public class Comentario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idComentario;
 
-    @Column(name = "Descripcion", nullable = false)
+    @Column(name = "descripcion", nullable = false)
     private String descripcion;
 
     @Column(name = "Estrellas", nullable = false)
@@ -34,23 +34,43 @@ public class Comentario {
         this.oncologo = oncologo;
     }
 
-    public int getIdComentario() { return idComentario; }
+    public int getIdComentario() {
+        return idComentario;
+    }
 
-    public void setIdComentario(int idComentario) { this.idComentario = idComentario; }
+    public void setIdComentario(int idComentario) {
+        this.idComentario = idComentario;
+    }
 
-    public String getDescripcion() { return descripcion; }
+    public String getDescripcion() {
+        return descripcion;
+    }
 
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
-    public int getEstrellas() { return estrellas; }
+    public int getEstrellas() {
+        return estrellas;
+    }
 
-    public void setEstrellas(int estrellas) { this.estrellas = estrellas; }
+    public void setEstrellas(int estrellas) {
+        this.estrellas = estrellas;
+    }
 
-    public Paciente getPaciente() { return paciente; }
+    public Paciente getPaciente() {
+        return paciente;
+    }
 
-    public void setPaciente(Paciente paciente) { this.paciente = paciente; }
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
 
-    public Oncologo getOncologo() { return oncologo; }
+    public Oncologo getOncologo() {
+        return oncologo;
+    }
 
-    public void setOncologo(Oncologo oncologo) { this.oncologo = oncologo; }
+    public void setOncologo(Oncologo oncologo) {
+        this.oncologo = oncologo;
+    }
 }
