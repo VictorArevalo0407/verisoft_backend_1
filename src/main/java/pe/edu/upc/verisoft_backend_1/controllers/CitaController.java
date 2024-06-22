@@ -24,7 +24,7 @@ public class CitaController {
         cS.insert(c);
 
     }
-@GetMapping("/gaaa")
+@GetMapping("/CantidadCitas")
         public List<CitaByOncologoDTO> cantidaddepacientesporoncologo() {
     List<String[]> filaListaa = cS.quantityCitasByOncologo();
     List<CitaByOncologoDTO> dtoList = new ArrayList<>();
@@ -46,7 +46,7 @@ return dtoList;
         }).collect(Collectors.toList());
     }
 
-    @GetMapping("/aa")
+    @GetMapping("/ConsultaNombre")
     public List<CitaDTO> listaCitaa(@RequestParam String oncologo){
         return cS.listCitaa(oncologo).stream().map(p->{
             ModelMapper c= new ModelMapper();
