@@ -17,7 +17,7 @@ public class PacienteController {
     private IPacienteService pS;
 
     @PostMapping
-    public void insertar(PacienteDTO pacienteDTO) {
+    public void insertar (@RequestBody PacienteDTO pacienteDTO) {
         ModelMapper m = new ModelMapper();
         Paciente p = m.map(pacienteDTO, Paciente.class);
         pS.insert(p);
