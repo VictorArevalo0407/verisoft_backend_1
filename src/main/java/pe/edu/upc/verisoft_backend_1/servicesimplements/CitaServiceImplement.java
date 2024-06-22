@@ -3,6 +3,7 @@ package pe.edu.upc.verisoft_backend_1.servicesimplements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.verisoft_backend_1.entities.Cita;
+import pe.edu.upc.verisoft_backend_1.entities.Seguro;
 import pe.edu.upc.verisoft_backend_1.repositories.ICitaRepository;
 import pe.edu.upc.verisoft_backend_1.servicesinterfaces.ICitaService;
 
@@ -36,4 +37,7 @@ public class CitaServiceImplement implements ICitaService {
     public List<Cita> listCitaa(String nombreyapellido) {
         return cR.listCitaa(nombreyapellido);
     }
+
+    @Override
+    public Cita listarId(int idCita) {return cR.findById(idCita).orElse(new Cita());}
 }

@@ -51,8 +51,8 @@ public class ComentarioController {
         comentarioService.insert(comentario);
     }
 
-    @DeleteMapping("/{comentarioId}")
-    public void eliminar(@PathVariable("comentarioId") Integer id) {
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id) {
         comentarioService.delete(id);
     }
 }
