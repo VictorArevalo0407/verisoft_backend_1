@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.verisoft_backend_1.dtos.AlergiasByPacienteDTO;
 import pe.edu.upc.verisoft_backend_1.dtos.AlergiasDTO;
+import pe.edu.upc.verisoft_backend_1.dtos.PacienteDTO;
 import pe.edu.upc.verisoft_backend_1.entities.Alergias;
+import pe.edu.upc.verisoft_backend_1.entities.Paciente;
 import pe.edu.upc.verisoft_backend_1.servicesinterfaces.IAlergiasService;
 
 import java.util.ArrayList;
@@ -27,7 +29,12 @@ public class AlergiasController {
         Alergias alergias = b.map(alergiasDTO, Alergias.class);
         aS.insert(alergias);
     }
-
+    @PutMapping
+    public void modificar(@RequestBody AlergiasDTO alergiasDTO) {
+        ModelMapper m = new ModelMapper();
+        Alergias alergias = m.map(alergiasDTO, Alergias.class);
+        aS.insert(alergias);
+    }
     @GetMapping
     public List<Alergias> listar() {
         return aS.list().stream().map(b -> {
