@@ -23,7 +23,7 @@ public class OncologoController {
     private IOncologoService oS;
 
     @PostMapping
-    @PreAuthorize("hasAuthority('ONCOLOGO')")
+    //@PreAuthorize("hasAuthority('ONCOLOGO')")
     public void registrar(@RequestBody OncologoDTO dto){
         ModelMapper m = new ModelMapper();
         Oncologo o = m.map(dto, Oncologo.class);
@@ -31,7 +31,7 @@ public class OncologoController {
     }
 
     @GetMapping
-    @PreAuthorize("hasAuthority('ONCOLOGO') OR hasAuthority('USER')")
+    //@PreAuthorize("hasAuthority('ONCOLOGO') OR hasAuthority('USER')")
     public List<OncologoDTO> listar(){
         return oS.list().stream().map(x->{
             ModelMapper m = new ModelMapper();

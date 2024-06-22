@@ -2,6 +2,7 @@ package pe.edu.upc.verisoft_backend_1.servicesimplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pe.edu.upc.verisoft_backend_1.entities.Especialidad;
 import pe.edu.upc.verisoft_backend_1.entities.Tratamiento;
 import pe.edu.upc.verisoft_backend_1.repositories.ITratamientoRepositorry;
 import pe.edu.upc.verisoft_backend_1.servicesinterfaces.ITratamientoService;
@@ -24,7 +25,11 @@ oR.save(tratamiento);
 
     @Override
     public void delete(int id) {
-oR.deleteById(id);
+        oR.deleteById(id);
+    }
 
+    @Override
+    public Tratamiento listId(int id) {
+        return oR.findById(id).orElse(new Tratamiento());
     }
 }

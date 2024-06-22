@@ -31,11 +31,23 @@ public class SeguroController {
             return m.map(y,SeguroDTO.class);
         }).collect(Collectors.toList());
     }
+    @GetMapping("/{id}")
+    public SeguroDTO listarId(@PathVariable("id") Integer id) {
+        ModelMapper m=new ModelMapper();
+        SeguroDTO dto=m.map(mS.listarId(id),SeguroDTO.class);
+        return dto;
+    }
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAuthority('Oncologo')")
+    //@PreAuthorize("hasAuthority('Oncologo')")
     public void eliminar(@PathVariable("id") Integer id){
         mS.delete(id);
 
+    }
+    @PutMapping()
+    public void modificar(@RequestBody SeguroDTO dto){
+        ModelMapper m=new ModelMapper();
+        Seguro mo=m.map(dto,Seguro.class);
+        mS.insert(mo);
     }
 
 
