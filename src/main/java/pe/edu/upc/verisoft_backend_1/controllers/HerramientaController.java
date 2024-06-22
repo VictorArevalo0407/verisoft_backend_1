@@ -23,7 +23,7 @@ public class HerramientaController {
         hS.insert(herramienta);
     }
     @GetMapping
-    //@PreAuthorize("hasAuthority('ADMINISTRADOR')OR hasAuthority('ONCOLOGO')")
+    @PreAuthorize("hasAuthority('ADMINISTRADOR')OR hasAuthority('ONCOLOGO')")
     public List<HerramientaDTO> listar(){
         return hS.list().stream().map(y->{
                     ModelMapper m= new ModelMapper();
