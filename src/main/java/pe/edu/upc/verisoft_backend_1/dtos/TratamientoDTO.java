@@ -1,29 +1,23 @@
 package pe.edu.upc.verisoft_backend_1.dtos;
 
+import pe.edu.upc.verisoft_backend_1.entities.Cita;
 import pe.edu.upc.verisoft_backend_1.entities.Oncologo;
+import pe.edu.upc.verisoft_backend_1.entities.TipoTratamiento;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class TratamientoDTO {
-
     private int idTratamiento;
-
     private String DescripcionTratamiento;
-
     private String EstadoTratamiento;
-
     private int PresupuestoTratamiento;
-
     private LocalDate FechaTratamiento;
-
-
-
     private int HorasTratamiento;
-
     private String EfectosEsperadosTratamiento;
-
     private Oncologo oncologo;
+    private TipoTratamiento tipoTratamiento;
+    private Cita cita;
 
     public int getIdTratamiento() {
         return idTratamiento;
@@ -65,10 +59,6 @@ public class TratamientoDTO {
         FechaTratamiento = fechaTratamiento;
     }
 
-
-
-
-
     public int getHorasTratamiento() {
         return HorasTratamiento;
     }
@@ -91,5 +81,21 @@ public class TratamientoDTO {
 
     public void setOncologo(Oncologo oncologo) {
         this.oncologo = oncologo;
+    }
+
+    public TipoTratamiento getTipoTratamiento() {
+        return tipoTratamiento;
+    }
+
+    public void setTipoTratamiento(TipoTratamiento tipoTratamiento) {
+        this.tipoTratamiento = tipoTratamiento;
+    }
+
+    public Cita getCita() {
+        return cita;
+    }
+
+    public void setCita(Cita cita) {
+        this.cita = cita;
     }
 }

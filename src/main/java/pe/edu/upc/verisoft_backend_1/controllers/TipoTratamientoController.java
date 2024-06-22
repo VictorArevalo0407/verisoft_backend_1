@@ -29,5 +29,4 @@ public class TipoTratamientoController {
             return m.map(y, TipoTratamientoDTO.class);
         }).collect(Collectors.toList());
     }
-
 }
