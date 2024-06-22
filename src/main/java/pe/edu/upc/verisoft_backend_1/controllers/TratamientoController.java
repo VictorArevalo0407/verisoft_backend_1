@@ -49,12 +49,4 @@ public class TratamientoController
         return dto;
 
     }
-
-    @PutMapping
-    public void modificar(@RequestBody TratamientoDTO dto){
-        ModelMapper m=new ModelMapper();
-        Tratamiento d=m.map(dto,Tratamiento.class);
-        tS.insert(d);
-    }
-
 }

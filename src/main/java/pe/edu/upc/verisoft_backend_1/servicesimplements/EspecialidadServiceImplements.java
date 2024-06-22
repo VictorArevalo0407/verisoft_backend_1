@@ -26,7 +26,6 @@ public class EspecialidadServiceImplements implements IEspecialidadService {
         eR.deleteById(id);
 
     }
-
     @Override
     public Especialidad listId(int id) {
         return eR.findById(id).orElse(new Especialidad());

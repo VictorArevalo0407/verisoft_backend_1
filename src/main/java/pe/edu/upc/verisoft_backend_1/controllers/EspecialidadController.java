@@ -36,6 +36,7 @@ public class EspecialidadController {
     public void eliminar(@PathVariable("id") Integer id){
         eS.delete(id);
     }
+
     @GetMapping("/{id}")
     public EspecialidadDTO listarId(@PathVariable("id") Integer id){
         ModelMapper m = new ModelMapper();
