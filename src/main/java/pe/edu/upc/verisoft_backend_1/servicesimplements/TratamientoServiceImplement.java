@@ -2,7 +2,7 @@ package pe.edu.upc.verisoft_backend_1.servicesimplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.verisoft_backend_1.entities.Especialidad;
+import pe.edu.upc.verisoft_backend_1.entities.TipoTratamiento;
 import pe.edu.upc.verisoft_backend_1.entities.Tratamiento;
 import pe.edu.upc.verisoft_backend_1.repositories.ITratamientoRepositorry;
 import pe.edu.upc.verisoft_backend_1.servicesinterfaces.ITratamientoService;

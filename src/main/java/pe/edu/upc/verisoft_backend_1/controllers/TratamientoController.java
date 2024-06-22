@@ -38,15 +38,23 @@ public class TratamientoController
         }).collect(Collectors.toList());
     }
 
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id){
+        tS.delete(id);
+    }
     @GetMapping("/{id}")
     public TratamientoDTO listarId(@PathVariable("id") Integer id){
         ModelMapper m = new ModelMapper();
         TratamientoDTO dto=m.map(tS.listId(id),TratamientoDTO.class);
         return dto;
+
     }
 
-    @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable("id") Integer id) {
-        tS.delete(id);
+    @PutMapping
+    public void modificar(@RequestBody TratamientoDTO dto){
+        ModelMapper m=new ModelMapper();
+        Tratamiento d=m.map(dto,Tratamiento.class);
+        tS.insert(d);
     }
+
 }

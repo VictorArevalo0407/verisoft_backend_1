@@ -43,4 +43,12 @@ public class EspecialidadController {
         return dto;
 
     }
+
+    @PutMapping
+    public void modificar(@RequestBody EspecialidadDTO dto){
+        ModelMapper m=new ModelMapper();
+        Especialidad d=m.map(dto,Especialidad.class);
+        eS.insert(d);
+    }
+
 }
